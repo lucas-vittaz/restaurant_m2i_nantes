@@ -1,18 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { UiComponent } from './components/ui/ui.component';
 
-
-
 @NgModule({
-  declarations: [
-    UiComponent
-  ],
+  declarations: [UiComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    // TemplatesModule
   ],
-  exports: [
-    UiComponent
-  ]
+  exports: [UiComponent],
 })
-export class UiModule { }
+export class UiModule {}

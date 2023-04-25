@@ -1,0 +1,32 @@
+#banner {
+  background: var(--app-light);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  h1 {
+    color: var(--app-clickable);
+  }
+  p {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--app-header--light);
+  }
+  .btn {
+    background: var(--app-clickable);
+    color: var(--app-text--light);
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background: var(--app-clickable--secondary);
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
