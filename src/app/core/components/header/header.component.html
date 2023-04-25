@@ -1,12 +1,11 @@
 <header>
-  <h1 id="head-title"><a href="#">M2EAT</a></h1>
+  <h1 id="head-title"><a href="#">M2<span>EAT</span></a></h1>
   <nav>
     <ul>
       <li><a href="#">Restaurants</a></li>
       <li><a href="#">Type Restaurant</a></li>
       <li><a href="#">Reservations</a></li>
       <li><a href="#">Mon compte</a></li>
-
       <li (click)="toggle()" *ngIf="dark$; else elseBlock"><app-icon-light></app-icon-light></li>
       <ng-template #elseBlock>
         <li (click)="toggle()"><app-icon-dark></app-icon-dark></li>

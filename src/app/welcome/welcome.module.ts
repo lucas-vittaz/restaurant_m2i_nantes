@@ -6,16 +6,18 @@ import { SharedModule } from '../shared/shared.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { PageWelcomeComponent } from './pages/page-welcome/page-welcome.component';
 import { WelcomeRoutingModule } from './welcome-routing.module';
+import { IconsModule } from "../icons/icons.module";
 
 @NgModule({
-  declarations: [PageWelcomeComponent],
-  imports: [
-    CommonModule,
-    WelcomeRoutingModule,
-    TemplatesModule,
-    SharedModule,
-    RouterModule,
-  ],
-  exports: [],
+    declarations: [PageWelcomeComponent],
+    exports: [],
+    imports: [
+        CommonModule,
+        WelcomeRoutingModule,
+        TemplatesModule,
+        SharedModule,
+        RouterModule,
+        IconsModule
+    ]
 })
 export class WelcomeModule {}

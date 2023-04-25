@@ -4,29 +4,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
   h1 {
     color: var(--app-clickable);
   }
   p {
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
     color: var(--app-header--light);
+    margin-bottom: 3rem;
   }
   .btn {
     background: var(--app-clickable);
-    color: var(--app-text--light);
+    color: var(--app-text--dark);
+    font-weight: bold;
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
     text-decoration: none;
     transition: 0.3s all ease-in-out;
     &:hover {
       background: var(--app-clickable--secondary);
     }
   }
-  img {
-    width: 100%;
-    height: auto;
+  .img-block {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 60%;
+      height: auto;
+    }
   }
 }

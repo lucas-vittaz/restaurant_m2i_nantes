@@ -1,0 +1,9 @@
+fa-icon {
+  color: var(--app-clickable);
+  font-size: 2rem;
+  margin-right: 5px;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    color: var(--app-clickable--secondary);
+  }
+}

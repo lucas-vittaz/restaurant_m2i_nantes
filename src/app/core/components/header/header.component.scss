@@ -8,14 +8,15 @@
 header {
   background: var(--app-light);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
   padding: 20px 50px;
-  box-shadow: 0 1px 8px var(--app-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100vw;
 }
 
 #head-title {
-  margin-right: auto;
   font-size: 1.5em;
 }
 
@@ -28,9 +29,18 @@ header li {
 header a {
   text-decoration: none;
   color: var(--app-text-light);
+  font-weight: bold;
   transition: all 0.3s ease 0s;
 }
 
+span{
+  color: var(--app-clickable);
+  transition: all 0.3s ease 0s;
+}
 header a:hover {
   color: var(--app-clickable);
+}
+
+span:hover{
+  color: var(--app-text-light) !important;
 }
