@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Type } from '@angular/core';
 import { Restaurant } from '../../models/restaurant';
 import { RestaurantsService } from '../../services/restaurants.service';
 import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { TypeRestaurantService } from 'src/app/type-restaurant/services/type-restaurant.service';
+import { TypeRestaurant } from 'src/app/type-restaurant/models/type-restaurant';
 
 @Component({
   selector: 'app-page-list-restaurants',
@@ -12,9 +14,15 @@ import { Router } from '@angular/router';
 export class PageListRestaurantsComponent {
   public collection$: BehaviorSubject<Restaurant[]>;
   public restaurant!: Restaurant;
+  public types$: BehaviorSubject<TypeRestaurant[]>;
 
-  constructor(private restaurantService: RestaurantsService, private router: Router) {
+  constructor(
+    private restaurantService: RestaurantsService,
+    private typeRestaurantService: TypeRestaurantService,
+    private router: Router
+  ) {
     this.collection$ = this.restaurantService.collection$;
-    console.log("depuis page list" + this.collection$);
+    console.log('depuis page list' + this.collection$);
+    this.types$ = this.typeRestaurantService.collection$;
   }
 }
