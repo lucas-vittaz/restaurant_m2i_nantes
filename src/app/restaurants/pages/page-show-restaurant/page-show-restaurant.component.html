@@ -1,1 +1,13 @@
-<p>page-show-restaurant works!</p>
+<app-template-full-width title="{{restaurant.nom}}">
+  <div class="restaurant-block">
+    <img src="https://picsum.photos/id/{{restaurant.id}}/200/300" />
+    <div class="restaurant-detail">
+      <h2>
+        {{ restaurant.nom }}
+      </h2>
+      <p>{{ restaurant.prix }}</p>
+      <p>{{ restaurant.adresse }}</p>
+      <p>{{ typeRestaurant.nom }}</p>
+    </div>
+  </div>
+</app-template-full-width>

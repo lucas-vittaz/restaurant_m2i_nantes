@@ -1,6 +1,8 @@
-import { Price } from "../enums/price";
+import { TypeRestaurant } from 'src/app/type-restaurant/models/type-restaurant';
+import { Price } from '../enums/price';
+import { RestaurantI } from '../interfaces/restaurant-i';
 
-export class Restaurant {
+export class Restaurant implements RestaurantI {
   id!: number;
   nom!: string;
   adresse!: string;
@@ -11,23 +13,29 @@ export class Restaurant {
   constructor(obj?: Partial<Restaurant>) {
     if (obj) {
       Object.assign(this, obj);
-      console.log("Hello from Restaurant class" + this.id + this.nom + this.adresse + this.typeId + this.prix);
+      console.log(
+        'Hello from Restaurant class' +
+          this.id +
+          this.nom +
+          this.adresse +
+          this.typeId +
+          this.prix
+      );
     }
   }
 
   enum_to_string() {
     switch (this.prix) {
       case Price.TRES_BON_MARCHE:
-        return "Très bon marché";
+        return 'Très bon marché';
       case Price.BON_MARCHE:
-        return "Bon marché";
+        return 'Bon marché';
       case Price.CHER:
-        return "Cher";
+        return 'Cher';
       case Price.TRES_CHER:
-        return "Très cher";
+        return 'Très cher';
       default:
-        return "Inconnu";
+        return 'Inconnu';
     }
   }
-
 }

@@ -5,9 +5,7 @@ import { TemplatesModule } from '../templates/templates.module';
 import { CardComponent } from './components/card/card.component';
 
 @NgModule({
-  declarations: [
-    CardComponent
-  ],
+  declarations: [CardComponent],
   imports: [CommonModule, RouterModule],
   exports: [TemplatesModule, CardComponent],
 })
