@@ -5,6 +5,20 @@ import { PageWelcomeComponent } from './welcome/pages/page-welcome/page-welcome.
 const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
   { path: 'welcome', component: PageWelcomeComponent },
+  {
+    path: 'restaurants',
+    loadChildren: () =>
+      import('./restaurants/restaurants.module').then(
+        (m) => m.RestaurantsModule
+      ),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./page-not-found/page-not-found.module').then(
+        (m) => m.PageNotFoundModule
+      ),
+  },
 ];
 
 @NgModule({
