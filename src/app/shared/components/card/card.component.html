@@ -3,9 +3,9 @@
     <img src="https://picsum.photos/id/{{restaurant.id}}/200/300" />
     <div class="container">
       <h4>{{ restaurant.nom }}</h4>
-      <p>{{ restaurant.prix }}</p>
-      <p>{{ restaurant.adresse }}</p>
-      <p>{{ type.nom }}</p>
+      <p>🪙 {{ restaurant.prix.toLowerCase().replace('_',' ') }}</p>
+      <p>🚩 {{ restaurant.adresse }}</p>
+      <p>🍜 {{ type.nom }}</p>
     </div>
   </a>
 </div>
