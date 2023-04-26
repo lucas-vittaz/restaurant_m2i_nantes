@@ -44,3 +44,7 @@ header a:hover {
 span:hover{
   color: var(--app-text-light) !important;
 }
+.router-link-active
+{
+  color: var(--app-clickable) !important;
+}

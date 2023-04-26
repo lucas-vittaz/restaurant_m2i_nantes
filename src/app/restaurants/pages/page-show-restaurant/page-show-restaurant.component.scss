@@ -1,9 +1,17 @@
 .restaurant-block {
+  padding-top:  5rem;
+  padding-bottom: 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  img{
+    border-radius: 15px;
+  }
+  .restaurant-detail {
+    padding-left: 2rem;
+    h2{
+      color: var(--app-clickable);
+    }
+  }
 }
 
-.restaurant-detail {
-  padding-left: 2rem;
-}
