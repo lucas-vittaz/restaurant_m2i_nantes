@@ -9,6 +9,7 @@
   background-color: var(--app-light);
   border-radius: 15px;
   margin: 2rem;
+  outline: 4px transparent;
   img {
     border-radius: 15px 15px 0 0;
     object-fit: cover;
@@ -23,6 +24,6 @@
   }
   &:hover {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    outline: 1px var(--app-clickable) solid;
+    outline: 4px var(--app-clickable) solid;
   }
 }
