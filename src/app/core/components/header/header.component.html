@@ -5,7 +5,7 @@
       <li><a routerLink="/restaurants" routerLinkActive="router-link-active">Restaurants</a></li>
       <li><a routerLink="/type-restaurants" routerLinkActive="router-link-active">Type Restaurant</a></li>
       <li><a routerLink="/reservations" routerLinkActive="router-link-active">Reservations</a></li>
-      <li><a routerLink="#" routerLinkActive="router-link-active">Mon compte</a></li>
+      <li><a routerLink="/administration" routerLinkActive="router-link-active">Administration</a></li>
       <li (click)="toggle()" *ngIf="dark$; else elseBlock"><app-icon-light></app-icon-light></li>
       <ng-template #elseBlock>
         <li (click)="toggle()"><app-icon-dark></app-icon-dark></li>

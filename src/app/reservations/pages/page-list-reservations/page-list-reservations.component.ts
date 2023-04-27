@@ -11,17 +11,14 @@ import { NumberFormatStyle } from '@angular/common';
   styleUrls: ['./page-list-reservations.component.scss'],
 })
 export class PageListReservationsComponent {
-  public collection$: BehaviorSubject<Reservation[]>;
+  public collection$!: BehaviorSubject<Reservation[]>;
   public month: string = 'Avril';
   public year: number = 2023;
   public nbDays: number = 30;
   public days: string[];
   public reservation!: Reservation;
 
-  constructor(
-    private reservationService: ReservationService,
-    private restaurantService: RestaurantsService
-  ) {
+  constructor(private reservationService: ReservationService) {
     this.collection$ = this.reservationService.collection$;
     this.days = [];
     for (let i = 1; i < this.nbDays; i++) {
@@ -31,5 +28,9 @@ export class PageListReservationsComponent {
         this.days.push(i.toString());
       }
     }
+  }
+
+  ngOnInit() {
+    this.reservationService.refreshCollection();
   }
 }
