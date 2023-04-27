@@ -1,7 +1,21 @@
-.cards-block{
-  padding-top:  10rem;
+.cards-block {
+  padding-top: 10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+// .add-btn {
+//   background: var(--app-clickable--secondary);
+//   color: var(--app-clickable);
+// }
+
+.add-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  z-index: 999;
+  background: var(--app-light);
+  color: var(--app-header--light);
 }

@@ -1,0 +1,42 @@
+<app-template-full-width title="Ajouter votre restaurant préféré 😊">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nom du restaurant</label>
+      <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez le nom du restaurant"
+        formControlName="nom">
+    </div>
+    <div class="form-group">
+      <label for="address">Adresse</label>
+      <input type="text" class="form-control" id="adresse" name="adresse"
+        placeholder="Entrez le nom l'adresse restaurant" formControlName="adresse">
+    </div>
+    <div class="form-group">
+      <label for="typeId">Type de cuisine</label>
+      <div class="form-control">
+        <select class="form-control" id="typeId" name="typeId" formControlName="typeId">
+          <option *ngFor="let selectItem of collection$ |async as typeRestaurants" [value]="selectItem.id">
+            {{selectItem.nom}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="prix">Prix</label>
+      <div class="form-control">
+        <select class="form-control" id="prix" name="prix" formControlName="prix">
+          <option value="">Sélectionnez un prix</option>
+          <option value="TRES_BON_MARCHE">Très bon marché</option>
+          <option value="BON_MARCHE">Bon marché</option>
+          <option value="CHER">Cher</option>
+          <option value="TRES_CHER">Très cher</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+  </form>
+  <div #success class="hide flash flash-success alert alert-dismissible fade show" role="alert">
+    <span><strong>Yay!</strong> Le restaurant a été ajoute</span>
+    <a data-bs-dismiss="alert" aria-label="Close">
+      <i class="fas fa-times"></i>
+    </a>
+  </div>
+</app-template-full-width>

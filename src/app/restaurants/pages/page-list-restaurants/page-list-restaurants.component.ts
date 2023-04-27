@@ -24,4 +24,5 @@ export class PageListRestaurantsComponent {
     this.collection$ = this.restaurantService.collection$;
     this.types$ = this.typeRestaurantService.collection$;
   }
+
 }
