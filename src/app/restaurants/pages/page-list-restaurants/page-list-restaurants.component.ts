@@ -22,7 +22,6 @@ export class PageListRestaurantsComponent {
     private router: Router
   ) {
     this.collection$ = this.restaurantService.collection$;
-    console.log('depuis page list' + this.collection$);
     this.types$ = this.typeRestaurantService.collection$;
   }
 }
