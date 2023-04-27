@@ -31,6 +31,12 @@ export class RestaurantsService {
   public getById(id: number): Observable<Restaurant> {
     return this.httpClient.get<Restaurant>(`${this.urlApi}/${id}`);
   }
+
+  public getRestaurantByTypeId(id: number): Observable<Restaurant[]> {
+    return this.httpClient.get<Restaurant[]>(
+      `${this.urlApi}/category/${id}`
+    );
+  }
 }
 // getAll: http://127.0.0.1:8080/spring-jpa/rest/restaurant/list-restaurants
 // getById: http://127.0.0.1:8080/spring-jpa/rest/restaurant/2
