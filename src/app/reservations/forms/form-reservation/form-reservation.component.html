@@ -1,4 +1,6 @@
+
 <form #myForm [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p class="subtitle">Réservez maintenant !</p>
   <div class="form-group">
     <label for="name">nom</label>
     <input
@@ -54,5 +56,5 @@
     <i class="fas fa-times"></i>
   </a>
 </div>
-
+<a #btn routerLink="/reservations" class="btn-reservations">Voir mes réservations</a>
 

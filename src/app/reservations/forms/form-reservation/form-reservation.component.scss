@@ -1,3 +1,8 @@
+.subtitle{
+  color: var(--app-clickable);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 form {
   width: 100%;
   max-width: 600px;
@@ -74,4 +79,21 @@ form {
 
 .visible {
   display: block;
+}
+
+.btn-reservations {
+  text-align: center;
+  text-decoration: none;
+  display: none;
+  background-color: var(--app-clickable);
+  color: white;
+  padding: 10px 10px;
+  border: none;
+
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  &:hover {
+    background-color: var(--app-clickable--secondary);
+  }
 }
