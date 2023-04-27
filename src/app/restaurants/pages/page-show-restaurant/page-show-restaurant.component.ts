@@ -28,7 +28,7 @@ export class PageShowRestaurantComponent {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private serviceRestaurant: RestaurantsService,
-    private serviceTypeRestaurant: TypeRestaurantService,
+    private serviceTypeRestaurant: TypeRestaurantService, 
     private serviceReservation : ReservationService
   ) {
     this.id = activatedRoute.snapshot.params['id'];
@@ -53,9 +53,9 @@ export class PageShowRestaurantComponent {
   public action(item: Reservation): void {
 
     this.serviceReservation.add(item).subscribe(() => {
-    
-    
+
+
     });
-    
+
      }
 }

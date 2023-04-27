@@ -25,4 +25,5 @@ export class PageListRestaurantsComponent {
     console.log('depuis page list' + this.collection$);
     this.types$ = this.typeRestaurantService.collection$;
   }
+
 }

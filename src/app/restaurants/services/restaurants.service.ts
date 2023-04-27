@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Restaurant } from '../models/restaurant';
-import { TypeRestaurantService } from 'src/app/type-restaurant/services/type-restaurant.service';
 @Injectable({
   providedIn: 'root',
 })
@@ -10,10 +9,7 @@ export class RestaurantsService {
   private urlApi: string;
   public collection$: BehaviorSubject<Restaurant[]>;
 
-  constructor(
-    private httpClient: HttpClient,
-    private typeRestaurantService: TypeRestaurantService
-  ) {
+  constructor(private httpClient: HttpClient) {
     this.urlApi = 'http://127.0.0.1:8080/spring-jpa/rest/restaurant';
     this.collection$ = new BehaviorSubject<Restaurant[]>([]);
     this.refreshCollection();
@@ -30,6 +26,11 @@ export class RestaurantsService {
 
   public getById(id: number): Observable<Restaurant> {
     return this.httpClient.get<Restaurant>(`${this.urlApi}/${id}`);
+  }
+
+  public add(restaurant: Restaurant): Observable<Restaurant> {
+    console.log('add');
+    return this.httpClient.post<Restaurant>(this.urlApi, restaurant);
   }
 }
 // getAll: http://127.0.0.1:8080/spring-jpa/rest/restaurant/list-restaurants
