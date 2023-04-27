@@ -8,6 +8,7 @@ import { PageAddRestaurantComponent } from './pages/page-add-restaurant/page-add
 import { SharedModule } from '../shared/shared.module';
 import { PageShowRestaurantComponent } from './pages/page-show-restaurant/page-show-restaurant.component';
 import { ReservationsModule } from '../reservations/reservations.module';
+import { PageListRestaurantsCategoriesComponent } from './pages/page-list-restaurants-categories/page-list-restaurants-categories.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ReservationsModule } from '../reservations/reservations.module';
     PageListRestaurantsComponent,
     PageEditRestaurantComponent,
     PageAddRestaurantComponent,
-    PageShowRestaurantComponent
+    PageShowRestaurantComponent,
+    PageListRestaurantsCategoriesComponent
   ],
   imports: [
     CommonModule,
