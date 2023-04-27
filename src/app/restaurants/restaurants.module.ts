@@ -10,6 +10,9 @@ import { PageEditRestaurantComponent } from './pages/page-edit-restaurant/page-e
 import { PageListRestaurantsComponent } from './pages/page-list-restaurants/page-list-restaurants.component';
 import { PageShowRestaurantComponent } from './pages/page-show-restaurant/page-show-restaurant.component';
 import { RestaurantsRoutingModule } from './restaurants-routing.module';
+import { ReservationsModule } from '../reservations/reservations.module';
+import { PageListRestaurantsCategoriesComponent } from './pages/page-list-restaurants-categories/page-list-restaurants-categories.component';
+
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import { RestaurantsRoutingModule } from './restaurants-routing.module';
     PageAddRestaurantComponent,
     PageShowRestaurantComponent,
     FormRestaurantComponent,
+    PageListRestaurantsCategoriesComponent
+
   ],
   imports: [
     CommonModule,

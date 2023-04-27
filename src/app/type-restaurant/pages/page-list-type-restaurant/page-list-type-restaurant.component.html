@@ -1,0 +1,6 @@
+
+
+<div class="cards-block" *ngIf="collection$ | async as typeRestaurants">
+  <app-card-type [typeRestaurant]="typeRestaurant"
+  *ngFor="let typeRestaurant of typeRestaurants "></app-card-type>
+</div>

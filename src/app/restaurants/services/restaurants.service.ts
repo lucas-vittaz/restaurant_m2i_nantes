@@ -28,9 +28,15 @@ export class RestaurantsService {
     return this.httpClient.get<Restaurant>(`${this.urlApi}/${id}`);
   }
 
+
   public add(restaurant: Restaurant): Observable<Restaurant> {
     console.log('add');
     return this.httpClient.post<Restaurant>(this.urlApi, restaurant);
+
+  public getRestaurantByTypeId(id: number): Observable<Restaurant[]> {
+    return this.httpClient.get<Restaurant[]>(
+      `${this.urlApi}/category/${id}`
+    );
   }
 }
 // getAll: http://127.0.0.1:8080/spring-jpa/rest/restaurant/list-restaurants
