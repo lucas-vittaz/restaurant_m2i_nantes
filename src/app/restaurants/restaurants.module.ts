@@ -7,6 +7,7 @@ import { PageEditRestaurantComponent } from './pages/page-edit-restaurant/page-e
 import { PageAddRestaurantComponent } from './pages/page-add-restaurant/page-add-restaurant.component';
 import { SharedModule } from '../shared/shared.module';
 import { PageShowRestaurantComponent } from './pages/page-show-restaurant/page-show-restaurant.component';
+import { ReservationsModule } from '../reservations/reservations.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { PageShowRestaurantComponent } from './pages/page-show-restaurant/page-s
   ],
   imports: [
     CommonModule,
-    RestaurantsRoutingModule, SharedModule
+    RestaurantsRoutingModule, SharedModule,
+    ReservationsModule
   ]
 })
 export class RestaurantsModule { }

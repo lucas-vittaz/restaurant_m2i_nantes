@@ -1,4 +1,4 @@
-<form action="">
+<form #myForm [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label for="name">nom</label>
     <input
@@ -6,37 +6,53 @@
       class="form-control"
       id="nom"
       placeholder="Entrez votre nom"
+      formControlName="nom"
+      [(ngModel)]="init.nom"
     />
   </div>
   <div class="form-group">
-    <label for="prenom">prenom address</label>
+    <label for="prenom">prenom </label>
     <input
-      type="email"
+      type="text"
       class="form-control"
       id="prenom"
-      placeholder="Entrez votre email"
+      placeholder="Entrez votre prenom"
+      formControlName="prenom"
+      [(ngModel)]="init.prenom"
     />
   </div>
   <div class="form-group">
-    <label for="phone">telephone</label>
+    <label for="phone">téléphone</label>
     <input
       type="phone"
       class="form-control"
       id="phone"
       placeholder="Entrez votre téléphone"
+      formControlName="telephone"
+      [(ngModel)]="init.telephone"
     />
   </div>
   <div class="form-group">
-    <label for="date">dateHeureDebut</label>
+    <label for="date">date de la reservation </label>
     <input
       type="date"
       class="form-control"
       id="date"
       placeholder="Entrez une date"
+      formControlName="dateHeureDebut"
+      [(ngModel)]="init.dateHeureDebut"
     />
   </div>
 
-  <input type="hidden" id="time" />
-  <input type="hidden" id="time" />
+  <input type="hidden" formControlName="restaurantId" [(ngModel)]="init.restaurantId"/>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<div #success class="hide flash flash-success alert alert-dismissible fade show" role="alert">
+  <span><strong>Yay!</strong> 🎉 Merci pour la réservation</span>
+  <a data-bs-dismiss="alert" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </a>
+</div>
+
+

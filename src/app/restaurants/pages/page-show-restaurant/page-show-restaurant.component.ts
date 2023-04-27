@@ -4,6 +4,8 @@ import { Restaurant } from '../../models/restaurant';
 import { RestaurantsService } from '../../services/restaurants.service';
 import { TypeRestaurant } from 'src/app/type-restaurant/models/type-restaurant';
 import { TypeRestaurantService } from 'src/app/type-restaurant/services/type-restaurant.service';
+import { Reservation } from 'src/app/reservations/models/reservation';
+import { ReservationService } from 'src/app/reservations/services/reservation.service';
 
 @Component({
   selector: 'app-page-show-restaurant',
@@ -16,12 +18,18 @@ export class PageShowRestaurantComponent {
   public typeRestaurant: TypeRestaurant;
 
   public title!: string;
+  public restaurantId!: number;
+  public init: Reservation;
+
+
+
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private serviceRestaurant: RestaurantsService,
-    private serviceTypeRestaurant: TypeRestaurantService
+    private serviceTypeRestaurant: TypeRestaurantService,
+    private serviceReservation : ReservationService
   ) {
     this.id = activatedRoute.snapshot.params['id'];
     this.restaurant = new Restaurant();
@@ -36,5 +44,18 @@ export class PageShowRestaurantComponent {
     });
 
     console.log('page show:' + this.restaurant);
+    console.log(this.restaurant);
+
+    this.init = new Reservation();
+    this.init.restaurantId = this.id;
   }
+
+  public action(item: Reservation): void {
+
+    this.serviceReservation.add(item).subscribe(() => {
+    
+    
+    });
+    
+     }
 }

@@ -9,5 +9,6 @@
       <p>🚩 {{ restaurant.adresse }}</p>
       <p>🍜 {{ typeRestaurant.nom }}</p>
     </div>
+    <app-form-reservation [init]="init" (submitted)="action($event)"></app-form-reservation>
   </div>
 </app-template-full-width>

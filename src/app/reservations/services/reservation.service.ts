@@ -16,7 +16,7 @@ export class ReservationService {
     private httpClient: HttpClient,
     private restaurantService: RestaurantsService
   ) {
-    this.urlApi = 'http://127.0.0.1:8080/spring-jpa/rest/reservations';
+    this.urlApi = 'http://127.0.0.1:8080/spring-jpa/rest/reservation';
     this.collection$ = new BehaviorSubject<Reservation[]>([]);
     this.refreshCollection();
   }
@@ -34,4 +34,10 @@ export class ReservationService {
   public getById(id: number): Observable<Reservation> {
     return this.httpClient.get<Reservation>(`${this.urlApi}/${id}`);
   }
+
+  public add(item: Reservation): Observable<Reservation> {
+
+     return this.httpClient.post<Reservation>(this.urlApi, item);
+    
+     }
 }
