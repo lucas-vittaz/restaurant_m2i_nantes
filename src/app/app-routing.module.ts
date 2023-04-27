@@ -13,6 +13,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'reservations',
+    loadChildren: () =>
+      import('./reservations/reservations.module').then(
+        (m) => m.ReservationsModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./page-not-found/page-not-found.module').then(
