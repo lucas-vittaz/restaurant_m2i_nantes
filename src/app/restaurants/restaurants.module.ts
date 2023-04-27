@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { ReservationsModule } from '../reservations/reservations.module';
 import { SharedModule } from '../shared/shared.module';
 import { FormRestaurantComponent } from './components/form-restaurant/form-restaurant.component';
 import { PageAddRestaurantComponent } from './pages/page-add-restaurant/page-add-restaurant.component';
@@ -13,7 +12,6 @@ import { RestaurantsRoutingModule } from './restaurants-routing.module';
 import { ReservationsModule } from '../reservations/reservations.module';
 import { PageListRestaurantsCategoriesComponent } from './pages/page-list-restaurants-categories/page-list-restaurants-categories.component';
 
-
 @NgModule({
   declarations: [
     PageListRestaurantsComponent,
@@ -21,8 +19,7 @@ import { PageListRestaurantsCategoriesComponent } from './pages/page-list-restau
     PageAddRestaurantComponent,
     PageShowRestaurantComponent,
     FormRestaurantComponent,
-    PageListRestaurantsCategoriesComponent
-
+    PageListRestaurantsCategoriesComponent,
   ],
   imports: [
     CommonModule,
