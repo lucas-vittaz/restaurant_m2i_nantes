@@ -13,6 +13,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'type-restaurants',
+    loadChildren: () =>
+      import('./type-restaurant/type-restaurant.module').then(
+        (m) => m.TypeRestaurantModule
+      ),
+  },
+  {
     path: '**',
     loadChildren: () =>
       import('./page-not-found/page-not-found.module').then(
