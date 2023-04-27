@@ -12,7 +12,7 @@ import { Reservation } from '../../models/reservation';
   selector: 'app-form-reservation',
   templateUrl: './form-reservation.component.html',
   styleUrls: ['./form-reservation.component.scss'],
-})
+}) 
 export class FormReservationComponent {
   public form!: FormGroup;
   @Input() public init!: Reservation;
