@@ -1,33 +1,40 @@
-<div class="calendar-container">
-  <div class="calendar-header">
-    <h1>
-       {{ month }}
-      <button>▾</button>
-    </h1>
-    <p>{{ year }}</p>
-  </div>
-  <div class="calendar"><span class="day-name">Mon</span><span class="day-name">Tue</span><span class="day-name">Wed</span><span class="day-name">Thu</span><span class="day-name">Fri</span><span class="day-name">Sat</span><span class="day-name">Sun</span>
-    <div class="day day--disabled">29</div>
-    <div class="day day--disabled">30</div>
-    <div class="day day--disabled">31</div>
-    <ng-container  *ngFor="let day of days">
-      <div class="day">
-      {{ day  }}
-      <div *ngIf="collection$ | async as reservations">
-        <ng-container  *ngFor="let item of reservations">
-          <app-calendar-item [item]="item" *ngIf="day == item.dateHeureDebut.substr(8,2)">
-          </app-calendar-item>
-              <!-- <section class="task task--primary">
-                {{ item.nom }} @ {{ item.restaurantId }}
-              </section> -->
-          </ng-container>
+<app-template-full-width title="Réservations">
+
+  <div class="calendar-container">
+    <div class="calendar-header">
+      <h1>
+        {{ month }}
+        <button>▾</button>
+      </h1>
+      <p>{{ year }}</p>
+    </div>
+    <div class="calendar">
+      <span class="day-name">Mon</span>
+      <span class="day-name">Tue</span>
+      <span class="day-name">Wed</span>
+      <span class="day-name">Thu</span>
+      <span class="day-name">Fri</span>
+      <span class="day-name">Sat</span>
+      <span class="day-name">Sun</span>
+      <div class="day day--disabled">29</div>
+      <div class="day day--disabled">30</div>
+      <div class="day day--disabled">31</div>
+      <ng-container  *ngFor="let day of days">
+        <div class="day">
+        {{ day  }}
+        <div *ngIf="collection$ | async as reservations">
+          <ng-container  *ngFor="let item of reservations">
+            <app-calendar-item [item]="item" *ngIf="day == item.dateHeureDebut.substr(8,2)">
+            </app-calendar-item>
+            </ng-container>
+          </div>
         </div>
-      </div>
-    </ng-container>
+      </ng-container>
 
-    <div class="day day--disabled">1</div>
-    <div class="day day--disabled">2</div>
-    <div class="day day--disabled">3</div>
+      <div class="day day--disabled">1</div>
+      <div class="day day--disabled">2</div>
+      <div class="day day--disabled">3</div>
+    </div>
   </div>
-</div>
 
+</app-template-full-width>

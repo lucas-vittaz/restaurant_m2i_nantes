@@ -8,14 +8,12 @@ import { UiModule } from '../ui/ui.module';
 import { WelcomeModule } from '../welcome/welcome.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, NavComponent],
+  declarations: [HeaderComponent, FooterComponent],
   exports: [
     HeaderComponent,
     FooterComponent,
-    NavComponent,
     UiModule,
     TemplatesModule,
     LoginModule,

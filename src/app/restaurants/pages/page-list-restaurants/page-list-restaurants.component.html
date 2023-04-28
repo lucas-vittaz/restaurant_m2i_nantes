@@ -1,4 +1,3 @@
 <div class="cards-block" *ngIf="collection$ | async as restaurants">
   <app-card [restaurant]="restaurant" *ngFor="let restaurant of restaurants"></app-card>
 </div>
-<app-btn label="add" route="add" class="add-btn"></app-btn>

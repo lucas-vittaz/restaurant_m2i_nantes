@@ -36,8 +36,6 @@ export class ReservationService {
   }
 
   public add(item: Reservation): Observable<Reservation> {
-
-     return this.httpClient.post<Reservation>(this.urlApi, item);
-    
-     }
+    return this.httpClient.post<Reservation>(this.urlApi, item);
+  }
 }

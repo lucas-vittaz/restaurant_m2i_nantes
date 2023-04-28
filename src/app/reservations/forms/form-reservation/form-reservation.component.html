@@ -9,7 +9,6 @@
       id="nom"
       placeholder="Entrez votre nom"
       formControlName="nom"
-      [(ngModel)]="init.nom"
     />
   </div>
   <div class="form-group">
@@ -20,7 +19,6 @@
       id="prenom"
       placeholder="Entrez votre prenom"
       formControlName="prenom"
-      [(ngModel)]="init.prenom"
     />
   </div>
   <div class="form-group">
@@ -31,23 +29,21 @@
       id="phone"
       placeholder="Entrez votre téléphone"
       formControlName="telephone"
-      [(ngModel)]="init.telephone"
     />
   </div>
   <div class="form-group">
     <label for="date">date de la reservation </label>
     <input
-      type="date"
+      type="datetime-local"
       class="form-control"
       id="date"
       placeholder="Entrez une date"
       formControlName="dateHeureDebut"
-      [(ngModel)]="init.dateHeureDebut"
     />
   </div>
 
   <input type="hidden" formControlName="restaurantId" [(ngModel)]="init.restaurantId"/>
-  <button type="submit" class="btn btn-primary">Envoyer</button>
+  <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Envoyer</button>
 </form>
 
 <div #success class="hide flash flash-success alert alert-dismissible fade show" role="alert">

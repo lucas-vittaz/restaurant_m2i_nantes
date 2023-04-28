@@ -25,4 +25,7 @@ export class PageListRestaurantsComponent {
     this.types$ = this.typeRestaurantService.collection$;
   }
 
+  ngOnInit() {
+    this.restaurantService.refreshCollection();
+  }
 }
