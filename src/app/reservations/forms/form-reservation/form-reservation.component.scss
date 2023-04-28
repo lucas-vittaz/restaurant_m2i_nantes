@@ -11,6 +11,12 @@ form {
   background-color: var(--app-light);
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  .ng-valid.ng-touched{
+    border: 3px solid var(--app-success);
+  }
+  .ng-invalid.ng-touched{
+    border: 3px solid var(--app-error);
+  }
 }
 
 .form-group {
@@ -97,3 +103,4 @@ form {
     background-color: var(--app-clickable--secondary);
   }
 }
+

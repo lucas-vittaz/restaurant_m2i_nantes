@@ -12,7 +12,7 @@ import { Reservation } from '../../models/reservation';
   selector: 'app-form-reservation',
   templateUrl: './form-reservation.component.html',
   styleUrls: ['./form-reservation.component.scss'],
-}) 
+})
 export class FormReservationComponent {
   public form!: FormGroup;
   @Input() public init!: Reservation;
@@ -30,7 +30,7 @@ export class FormReservationComponent {
     this.form = this.formBuilder.group({
       id: [this.init.id],
       nom: [this.init.nom, Validators.required],
-      prenom: [this.init.prenom],
+      prenom: [this.init.prenom, Validators.required],
       telephone: [this.init.telephone, Validators.required],
       dateHeureDebut: [this.init.dateHeureDebut, Validators.required],
       restaurantId: [this.init.restaurantId, Validators.required],
