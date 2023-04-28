@@ -31,6 +31,7 @@ export class FormReservationComponent {
       id: [this.init.id],
       nom: [this.init.nom, Validators.required],
       prenom: [this.init.prenom, Validators.required],
+
       telephone: [this.init.telephone, Validators.required],
       dateHeureDebut: [this.init.dateHeureDebut, Validators.required],
       restaurantId: [this.init.restaurantId, Validators.required],
