@@ -1,0 +1,13 @@
+<form #myForm [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nom">Type de restaurant</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      placeholder="Entrez un type"
+      formControlName="nom"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>

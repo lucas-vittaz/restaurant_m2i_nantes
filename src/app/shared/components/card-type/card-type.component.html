@@ -2,7 +2,8 @@
   <a routerLink="/restaurants/categories/{{ typeRestaurant.id }}">
     <div
       class="card-category"
-      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/id/{{typeRestaurant.id}}/200/300)"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+      url(/assets/images/type_cuisine-{{typeRestaurant.id}}.jpg)"
     >
       {{ typeRestaurant.nom }}
     </div>

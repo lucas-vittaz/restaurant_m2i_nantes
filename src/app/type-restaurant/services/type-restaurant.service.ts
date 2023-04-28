@@ -31,4 +31,8 @@ export class TypeRestaurantService {
     console.log(`${this.urlApi}/${id}`);
     return this.httpClient.get<TypeRestaurant>(`${this.urlApi}/${id}`);
   }
+
+  public add(typeRestaurant: TypeRestaurant): Observable<TypeRestaurant> {
+    return this.httpClient.post<TypeRestaurant>(this.urlApi, typeRestaurant);
+  }
 }
